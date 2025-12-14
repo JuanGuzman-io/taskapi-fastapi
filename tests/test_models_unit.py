@@ -11,16 +11,15 @@ class TestEnums:
 
     def test_task_status_values(self):
         """Test valores válidos de TaskStatus"""
-        assert TaskStatus.PENDING.value == "pending"
-        assert TaskStatus.IN_PROGRESS.value == "in_progress"
-        assert TaskStatus.COMPLETED.value == "completed"
+        assert TaskStatus.pending.value == "pending"
+        assert TaskStatus.completed.value == "completed"
 
     def test_task_category_values(self):
         """Test valores válidos de TaskCategory"""
-        assert TaskCategory.WORK.value == "work"
-        assert TaskCategory.PERSONAL.value == "personal"
-        assert TaskCategory.SHOPPING.value == "shopping"
-        assert TaskCategory.OTHER.value == "other"
+        assert TaskCategory.work.value == "work"
+        assert TaskCategory.personal.value == "personal"
+        assert TaskCategory.study.value == "study"
+        assert TaskCategory.other.value == "other"
 
 
 @pytest.mark.unit

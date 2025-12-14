@@ -82,11 +82,11 @@ class TestTaskCRUD:
     def test_update_task_status(self, client, create_task):
         """Test actualizar solo el estado de la tarea"""
         task_id = create_task["id"]
-        status_update = {"status": "in_progress"}
+        status_update = {"status": "completed"}
         response = client.patch(f"/tasks/{task_id}/status", json=status_update)
         assert response.status_code == 200
         data = response.json()
-        assert data["status"] == "in_progress"
+        assert data["status"] == "completed"
         assert data["title"] == create_task["title"]  # Title no cambió
 
     def test_delete_task(self, client, create_task):
