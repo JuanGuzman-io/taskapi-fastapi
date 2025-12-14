@@ -1,4 +1,11 @@
+# Dependencias principales
 fastapi>=0.100.0
 uvicorn>=0.20.0
 sqlalchemy>=2.0.0
 annotated-types>=0.4.0
+
+# Dependencias de testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.24.0
+pytest-cov>=4.1.0
